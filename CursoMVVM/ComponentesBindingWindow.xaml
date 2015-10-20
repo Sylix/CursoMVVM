@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Binding entre componentes visuais" Height="250" Width="350">
+        Title="Binding entre componentes visuais" Height="250" Width="350" WindowStartupLocation="CenterScreen">
     <StackPanel Margin="10">
         <Slider Name="FontSizeSlider" Minimum="5" Maximum="100" Value="14"/>
-        <TextBox Name="SizeTextBox" Text="{Binding ElementName=FontSizeSlider, Path=Value}" Margin="0,10,0,5"/>
-        <TextBox Name="InfoTextBox" Text="Binding" Margin="0,0,0,20"/>
+        <TextBox Name="SizeTextBox" Text="{Binding Value, ElementName=FontSizeSlider, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Margin="0,10,0,5"/>
+        <TextBox Name="InfoTextBox" Text="NET Coders" Margin="0,0,0,20"/>
         <TextBlock Text="{Binding ElementName=InfoTextBox, Path=Text}" FontSize="{Binding ElementName=SizeTextBox,  Path=Text}" HorizontalAlignment="Center"/>
     </StackPanel>
 </Window>

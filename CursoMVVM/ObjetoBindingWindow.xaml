@@ -1,0 +1,26 @@
+﻿<Window x:Class="CursoMVVM.ObjetoBindingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CursoMVVM"
+        mc:Ignorable="d"
+        Title="ObjetoBindingWindow" Height="100" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Nome" Grid.Row="0" Grid.Column="0"/>
+        <TextBox Text="{Binding Nome}" Grid.Row="0" Grid.Column="1" Margin="5,0,0,5"/>
+
+        <TextBlock Text="Sobrenome" Grid.Row="1" Grid.Column="0"/>
+        <TextBox Text="{Binding Sobrenome}" Grid.Row="1" Grid.Column="1" Margin="5,0,0,5"/>
+    </Grid>
+</Window>
